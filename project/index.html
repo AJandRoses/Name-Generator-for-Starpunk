@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Name Generator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="theme-scifi">
+    <script type="module" src="./scripts/main.js"></script>
+    <header>
+      <h1>Name Generator</h1>
+    </header>
+
+    <main>
+      <section class="input-region">
+        <div class="setting-region-div">
+          <label for="setting-select">Setting:</label>
+          <select id="setting-select">
+            <option value="sol">Sol</option>
+            <option value="redemption">Redemption</option>
+          </select>
+          <label for="region-select">Region:</label>
+          <select id="region-select">
+            <!-- JavaScript will fill this -->
+          </select>
+        </div>
+
+        <div class="type-button-area">
+          <button class="type-button selected" data-type="character">
+            Character
+          </button>
+          <button class="type-button" data-type="place">Place</button>
+          <button class="type-button" data-type="vehicle">Vehicle</button>
+          <button class="type-button" data-type="item">Item</button>
+        </div>
+
+        <div id="dynamic-options">
+          <!-- Options here determined by output.js renderOptions() based on type chosen above -->
+        </div>
+      </section>
+
+      <section class="output-region">
+        <div class="name-display"></div>
+        <div class="side-info">
+          <div class="additional-info-display"></div>
+          <div class="extra-generation-display"></div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
